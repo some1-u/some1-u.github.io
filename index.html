@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Samanyu Mahadevan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+          "Segoe UI", sans-serif;
+        background: #050509;
+        color: #f5f5f5;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .wrap {
+        max-width: 720px;
+        padding: 32px 24px;
+      }
+
+      .tag {
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #9ca3af;
+        margin-bottom: 12px;
+      }
+
+      h1 {
+        font-size: clamp(32px, 5vw, 44px);
+        line-height: 1.1;
+        margin-bottom: 16px;
+      }
+
+      .accent {
+        color: #a855f7;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #d1d5db;
+        margin-bottom: 24px;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 8px;
+      }
+
+      .pill {
+        border-radius: 999px;
+        border: 1px solid #4b5563;
+        padding: 8px 14px;
+        font-size: 13px;
+        color: #e5e7eb;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: border-color 0.18s ease, background 0.18s ease,
+          transform 0.12s ease;
+      }
+
+      .pill span {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: #9ca3af;
+      }
+
+      .pill:hover {
+        border-color: #a855f7;
+        background: rgba(168, 85, 247, 0.08);
+        transform: translateY(-1px);
+      }
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: #22c55e;
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        color: #9ca3af;
+        margin-bottom: 18px;
+      }
+
+      .status strong {
+        color: #e5e7eb;
+        font-weight: 500;
+      }
+
+      footer {
+        margin-top: 32px;
+        font-size: 11px;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <div class="tag">msamanyu.me</div>
+
+      <div class="status">
+        <span class="dot"></span>
+        <span>Live • <strong>work in progress</strong></span>
+      </div>
+
+      <h1>
+        I’m <span class="accent">Samanyu</span>.<br />
+        This is the start of something bigger.
+      </h1>
+
+      <p>
+        Right now this page is intentionally minimal—just a placeholder while I
+        shape what lives here. Expect experiments, half-finished ideas, and
+        things that feel more like a signal than a polished product.
+      </p>
+
+      <div class="links">
+        <a class="pill" href="mailto:your@email.here">
+          <span>Contact</span>
+          say hi
+        </a>
+        <a class="pill" href="https://github.com/some1-u" target="_blank">
+          <span>GitHub</span>
+          some1-u
+        </a>
+        <!-- Add more links as you go -->
+      </div>
+
+      <footer>
+        © <span id="year"></span> Samanyu Mahadevan. All rights reserved.
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent =
+        new Date().getFullYear().toString();
+    </script>
+  </body>
+</html>
